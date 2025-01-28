@@ -5,6 +5,7 @@ import { FaYoutube } from "react-icons/fa";
 import { FaInstagramSquare } from "react-icons/fa";
 import { AiFillTikTok } from "react-icons/ai";
 import Momologo from "../../assets/images/momologo.png"
+import { NavLink } from "react-router-dom";
 
 
 
@@ -33,10 +34,20 @@ function Footer() {
 
                             <h1 className='text-green-800 font-bold'>momos</h1>
                             <div className='text-slate-600'>
-                                <p>About Us  </p>
-                                <p>Our Menu</p>
-                                <p>Our Services</p>
-                                <p>Contact Us</p>
+                                <NavLink to="/about">
+                                    <p>About Us  </p>
+                                </NavLink>
+                                <NavLink to="/menu">
+                                    <p>Our Menu</p>
+                                </NavLink>
+                                <NavLink to="/services">
+                                    <p>Our Services</p>
+                                </NavLink>
+
+                                <NavLink to="/contact">
+                                    <p>Contact Us</p>
+                                </NavLink>
+
                             </div>
                         </div>
 
@@ -55,14 +66,30 @@ function Footer() {
                         <div className="mb-3">
                             <h1 className='text-green-800 font-bold'>Follow Us</h1>
                             <div className="flex gap-6 mt-3 text-2xl text-slate-500">
-                                <FaFacebook />
-                                <FaLinkedin />
-                                <AiFillTwitterCircle />
+                                <NavLink to="https://www.facebook.com/" target="_blank" >
+                                    <FaFacebook />
+                                </NavLink>
+
+                                <NavLink to="https://www.Linkedin.com/" target="_blank">
+                                    <FaLinkedin />
+                                </NavLink>
+
+                                <NavLink to="https://www.Twitter.com/" target="_blank">
+                                    <AiFillTwitterCircle />
+                                </NavLink>
                             </div>
                             <div className="flex gap-6 mt-5 text-2xl text-slate-500">
-                                <FaYoutube />
-                                <FaInstagramSquare />
-                                <AiFillTikTok />
+                                <NavLink to="https://www.Youtube.com/" target="_blank">
+                                    <FaYoutube />
+                                </NavLink>
+
+                                <NavLink to="https://www.Instagram.com/" target="_blank">
+                                    <FaInstagramSquare />
+                                </NavLink>
+
+                                <NavLink to="https://www.Tiktok.com/" target="_blank">
+                                    <AiFillTikTok />
+                                </NavLink>
                             </div>
 
                         </div>

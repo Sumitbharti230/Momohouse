@@ -102,7 +102,10 @@ function Home() {
         <div className="w-[30%]">
           <h1 className="text-2xl font-bold">Why Customers <span className="text-orange-500"> Love Us</span></h1> <br /><br />
           <p>Lorem ipsum dolor sit amet consectetur. Sed diam dolor vivamus nibh fermentum vulputate tortor. Egestas facilisi luctus turpis arcu dignissim. Amet neque enim etiam purus id. Tortor sit orci blandit cursus turpis.</p> <br />
+        
+        <NavLink to="/about">
           <Button title="Explore Our Story" />
+          </NavLink>
 
         </div>
 

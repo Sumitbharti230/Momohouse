@@ -6,6 +6,7 @@ import party1 from "../../assets/images/party1.png"
 import qr1 from "../../assets/images/qr1.png"
 import cheifCap1 from "../../assets/images/cheifCap1.png"
 import Footer from "../Footer/Footer"
+import { NavLink } from "react-router-dom"
 
 function Services() {
   return (
@@ -105,7 +106,10 @@ function Services() {
           <h1 className="text-3xl font-bold mt-9 ">Got any Queries?</h1>
           <p className="text-slate-500 mb-16 mt-8">If you have any queries, send us a message. Our Friendly team would love to hear from you </p>
 <div className="mb-5 flex items-center justify-center">
+
+  <NavLink to='/contact'>
           <Button title="Get in touch"/>
+          </NavLink>
           </div>
         </div>
 
