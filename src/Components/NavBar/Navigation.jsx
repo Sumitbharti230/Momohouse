@@ -29,7 +29,7 @@ function Navigation() {
       </div>
 
 
-      <div className="items-center space-x-6 p- text-center text-slate-500 ">
+      <div className="items-center space-x-6 p- text-center text-slate-500 flex ">
         <NavLink to='/about' className="relative after:absolute after:bottom-0 after:left-0 after:h-[3px] after:w-0 after:bg-orange-400 after:transition-all after:duration-300 hover:after:w-full">About Us</NavLink>
         <NavLink to='/services' className="relative after:absolute after:bottom-0 after:left-0 after:h-[3px] after:w-0 after:bg-orange-400 after:transition-all after:duration-300 hover:after:w-full"> Our Services</NavLink>
         <NavLink to='/menu' className="relative after:absolute after:bottom-0 after:left-0 after:h-[3px] after:w-0 after:bg-orange-400 after:transition-all after:duration-300 hover:after:w-full">Our Menu</NavLink>
@@ -44,8 +44,8 @@ function Navigation() {
             LogOut
           </NavLink>
         ) : (
-          <div>
-            <NavLink to="/login">Login</NavLink>
+          <div className="">
+            <NavLink to="/login">Login</NavLink>&nbsp; &nbsp;
             <NavLink to="/signUp">SignUP</NavLink>
           </div>
         )}
@@ -58,7 +58,7 @@ function Navigation() {
 
       </div>
 
-      <NavLink to="/Cartpage" className=" left-32 relative text-2xl text-slate-500 ">
+      <NavLink to="/Cartpage" className=" left-28 relative text-2xl text-slate-500 ">
         <FiShoppingCart className="w-10 h-14" />
         <span className=" absolute bottom-8  text-red-600 left-10  font-bold rounded-full   "> {totalItems}</span>
       </NavLink>
