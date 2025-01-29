@@ -5,6 +5,7 @@ export const CartContext = createContext();
 const initialState = {
     CartItems: (() => {
         const cart = localStorage.getItem("cart");
+
         if (cart) {
             try {
                 return JSON.parse(cart);
@@ -15,7 +16,12 @@ const initialState = {
         }
         return [];
     })(),
+
+
 };
+
+
+
 
 const CartReducer = (state, action) => {
     console.log(action);
@@ -100,5 +106,5 @@ export const CartProvider = ({ children }) => {
         <CartContext.Provider value={{ state, dispatch }}>
             {children}
         </CartContext.Provider>
-    );
+    );
 };

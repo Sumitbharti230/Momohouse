@@ -4,7 +4,7 @@ import cheffinger from '../../assets/images/cheffinger.png'
 import qr from '../../assets/images/qr.png'
 import blue from '../../assets/images/Ablue.png'
 import masala from '../../assets/images/Amasala.png'
-import { FaRegCheckCircle, FaRegCircle } from "react-icons/fa";
+import { FaRegCircle } from "react-icons/fa";
 
 const Allergy = () => {
   return (
