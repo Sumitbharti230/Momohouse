@@ -8,8 +8,14 @@ const CartPage = () => {
   const { state, dispatch } = useContext(CartContext)
   const CartItems = state.CartItems
   const totalItems = state.CartItems.reduce((acc, item) => {
+    return acc + item.qty;
+  }, 0);
+
+
+  const totalAmount = state.CartItems.reduce((acc, item) => {
     return acc + item.qty * item.caloriesPerServing;
   }, 0);
+
 
 
   // console.log(state)
@@ -30,7 +36,7 @@ const CartPage = () => {
                     </div>
 
                     <div>
-                      <p>Rs: {totalItems}</p>
+                      <p>Rs: {item.caloriesPerServing}</p>
                       <button
                         onClick={() => {
                           dispatch({ type: "Delete", payload: { id: item.id } })
@@ -72,7 +78,7 @@ const CartPage = () => {
         <div className="border-2 shadow flex  flex-wrap flex-col items-center justify-center shadow-slate-500 h-80 ml-8  rounded-lg w-[25%]  ">
           <p className="text-2xl font-medium">Order Summary :</p>
           <p className=" pl-8  items-center">Thank you for choosing us. If you have<br /> any questions, feel free to contact us.</p>
-          <p className="text-2xl font-medium mt-4">Total Price : </p>
+          <p className="text-2xl font-medium mt-4">Total Price :Rs {totalAmount} </p>
 
           <NavLink to="/payment " state={[...CartItems]}>
             <button

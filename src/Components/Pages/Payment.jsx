@@ -27,11 +27,11 @@ console.log(transaction_uuid)
 
 
   return (
-    <div className=" justify-between mt-5  ">
+    <div className="  mt-5 flex justify-center  ">
 
       <form
         action="https://rc-epay.esewa.com.np/api/epay/main/v2/form"
-        method="POST" className=" gap-10  flex flex-col"
+        method="POST" className=" gap-5  flex flex-col text-center border-2 p-3 shadow-xl"
       >
         <input type="hidden" id="amount" name="amount" value={total_amount} required />
         <input
@@ -41,12 +41,14 @@ console.log(transaction_uuid)
           value="0"
           required
         />
+        <p className="text-2xl font-bold"><span className="text-orange-600">Cofirm</span> to Pay</p>
+        <p className="font-semibold">Total_amount is</p>
         <input
           type="text"
           id="total_amount"
           name="total_amount"
           value= {total_amount}
-          required
+          required className="font-semibold text-red-600 shadow-sm items-center text-center"
         />
         <input
           type="hidden"
@@ -104,7 +106,7 @@ console.log(transaction_uuid)
           value={hashInBase64}
           required
         />
-        <input className="bg-orange-500 text-white p-2  rounded-lg w-44" value="Conform" type="submit" />
+        <input className="bg-orange-500 text-white p-2  rounded-lg w-44" value="Confirm" type="submit" />
       </form>
     </div>
   );

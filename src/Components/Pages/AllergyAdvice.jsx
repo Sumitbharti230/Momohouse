@@ -26,23 +26,17 @@ const Allergy = () => {
           <h1 className='text-3xl text-black font-bold'>---------------<span className='text-orange-600'>Ingridient's</span> Used ---------------</h1>
 
 
-
-          <div>
-            <img src={blue} alt="" className="w-96 absolute bg-cover " />
-          </div>
           <div>
 
-            <div className='border-2 border-blue-600  font-semibold flex rounded-xl w-[744px] h-[344px] pl-10 mt-20 '>
-              <ul className=' list-disc space-y-9 p-5'>
-                <h1 className='text-black  font-medium text-2xl mb-4'>For The Dough</h1>
-                <li>120 grams refined flour</li>
-                <li>1/2 tsp baking powder</li>
-                <li>1/2 tsp salt water (for kneading)</li>
-              </ul>
+              <div className='border-2 border-blue-600  font-semibold flex rounded-xl w-[744px] h-[344px] pl-10 mt-20 '>
+                <ul className=' list-disc space-y-9 p-5'>
+                  <h1 className='text-black  font-medium text-2xl mb-4'>For The Dough</h1>
+                  <li>120 grams refined flour</li>
+                  <li>1/2 tsp baking powder</li>
+                  <li>1/2 tsp salt water (for kneading)</li>
+                </ul>
 
-            </div>
-
-
+              </div>
 
           </div>
 
@@ -91,8 +85,8 @@ const Allergy = () => {
       </div>
       <div className='flex ml-20 mt-20 items-center justify-center'>
         <div  >
-          <h1 className='mb-10 items-center justify-center flex text-2xl font-bold '> <span className='text-orange-600'>Allergy  &nbsp;</span>
-            Advice</h1>
+          <h1 className='mb-10 items-center justify-center flex text-2xl font-bold '> ---------------<span className='text-orange-600'>Allergy  &nbsp;</span>
+            Advice---------------</h1>
           <p className='ml-10 items-center text-1xl text-black'>Lorem ipsum dolor sit amet consectetur. Feugiat lectus sit est blandit in gravida. Nisl facilisis luctus sit porttitor placerat purus tincidunt. Cursus<br /> nascetur a mauris odio quis sociis pretium nisl. In viverra diam dis montes orci congue vulputate magna ullamcorper. Semper tellus ipsum felis <br />maecenas ultrices turpis amet euismod malesuada. Amet sed neque vitae malesuada quis sed urna.<br /><br />
 
             Feugiat orci feugiat cursus risus tincidunt. Aliquet nam iaculis bibendum tortor varius sit. Volutpat nunc nisl quisque elit. Ac est ultricies risus et sed. <br />Donec auctor tristique quam morbi pellentesque et. Scelerisque dui id arcu laoreet iaculis nunc et nulla sed. Aliquet nullam vulputate quis ut mi <br />placerat auctor. Ipsum massa suspendisse netus mollis interdum.<br /><br />
@@ -116,10 +110,10 @@ const Allergy = () => {
 
 
       <div className="mt-10">
-      <hr />
+        <hr />
 
-    <Footer/>
-    </div>
+        <Footer />
+      </div>
 
     </div>
 

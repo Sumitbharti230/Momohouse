@@ -3,14 +3,16 @@ import { useSearchParams } from 'react-router-dom'
 
 function Success() {
 
-  console.log("Success")
+  // console.log("Success")
   const [SearchParams]=useSearchParams()
   let data=SearchParams.get("data")
   console.log(data)
 
+
   const decodedData = atob(data);
   const newData = JSON.parse(decodedData);
   console.log(newData);
+
 
   return (
     <div className=' flex justify-center p-2 h-[100%]'>
