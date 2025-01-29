@@ -58,12 +58,15 @@ function Navigation() {
 
       </div>
 
-      <NavLink to="/Cartpage" className=" left-28 relative text-2xl text-slate-500 ">
+     
+      <div className=" flex items-center gap-x-3">
+
+      <NavLink to="/Cartpage" className=" relative text-2xl text-slate-500 ">
         <FiShoppingCart className="w-10 h-14" />
         <span className=" absolute bottom-8  text-red-600 left-10  font-bold rounded-full   "> {totalItems}</span>
       </NavLink>
 
-      <div className=" flex items-center gap-x-3">
+
         <NavLink to="https://www.facebook.com/" target="_blank" className="text-2xl text-slate-500 ">
           <FaFacebook />
         </NavLink>

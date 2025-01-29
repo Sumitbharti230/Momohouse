@@ -52,7 +52,7 @@ function About() {
             <p className="mt-6 text-slate-500">Lorem ipsum dolor sit amet consectetur. Lectus <br /> faucibus lorem ac adipiscing. Leo odio tincidunt <br /> ipsum magna lacus viverra tincidunt. Viverra aliquet <br /> sollicitudin eget dapibus. Vestibulum velit viverra <br /> gravida consectetur sed facilisis ut morbi.</p>
 
 
-            <img src={momo1} alt="momo1" className="w-28 ml-5 " />
+            {/* <img src={momo1} alt="momo1" className="w-28 ml-5 " /> */}
           </div>
 
           <div>
