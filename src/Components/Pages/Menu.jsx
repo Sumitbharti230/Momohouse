@@ -57,8 +57,8 @@ function Menu() {
 
                   <NavLink to={`/productdescription/${items.id}`}>
                   <img src={items.image} alt="menu" className="w-64 p-5 rounded-3xl" />
-                  <p> Name:{items.name}</p>
-                  <p className="text-orange-600">Price:Rs {items.caloriesPerServing}</p>
+                  <p className="font-bold"> {items.name}</p>
+                  <p className="text-red-600 font-semibold">Rs {items.caloriesPerServing}</p>
                   </NavLink>
                 </div>
               )
