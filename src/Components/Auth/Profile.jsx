@@ -3,7 +3,8 @@ import { GoMoon } from "react-icons/go";
 import { useState } from "react";
 
 function Profile() {
-  const { user, isAuthenticated, isLoading, loginWithRedirect } = useAuth0();
+  const { user, isAuthenticated, isLoading, loginWithRedirect,logout } = useAuth0();
+
   const [darkMode, setDarkMode] = useState(false);
 
   console.log(user, user);
@@ -39,7 +40,13 @@ function Profile() {
             <p>Nickname: {user.nickname}</p>
             <p>Email: {user.email}</p>
             <button className="bg-teal-800 rounded-sm text-white h-10 w-36 mt-6">
-              Logout
+            <NavLink
+            onClick={() => {
+              logout();
+            }}
+          >
+            LogOut
+          </NavLink>
             </button>
           </div>
         </div>
