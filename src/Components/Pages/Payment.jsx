@@ -82,14 +82,14 @@ console.log(transaction_uuid)
           type="hidden"
           id="success_url"
           name="success_url"
-          value="http://localhost:5174/success"
+          value="https://nepalmomohouse.vercel.app/success"
           required
         />
         <input
           type="hidden"
           id="failure_url"
           name="failure_url"
-          value="http://localhost:5174/failure"
+          value="https://nepalmomohouse.vercel.app/failure"
           required
         />
         <input
