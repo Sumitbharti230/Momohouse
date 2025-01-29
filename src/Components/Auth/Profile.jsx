@@ -40,13 +40,8 @@ function Profile() {
             <p>Nickname: {user.nickname}</p>
             <p>Email: {user.email}</p>
             <button className="bg-teal-800 rounded-sm text-white h-10 w-36 mt-6">
-            <NavLink
-            onClick={() => {
-              logout();
-            }}
-          >
-            LogOut
-          </NavLink>
+              
+              Logout
             </button>
           </div>
         </div>
