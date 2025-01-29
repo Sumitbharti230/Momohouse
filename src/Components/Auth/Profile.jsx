@@ -39,7 +39,9 @@ function Profile() {
             <h2 className="underline">Name: {user.name}</h2>
             <p>Nickname: {user.nickname}</p>
             <p>Email: {user.email}</p>
-            <button className="bg-teal-800 rounded-sm text-white h-10 w-36 mt-6">
+            <button className="bg-teal-800 rounded-sm text-white h-10 w-36 mt-6"  onClick={() => {
+              logout();
+            }}>
               
               Logout
             </button>
