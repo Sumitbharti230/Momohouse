@@ -1,110 +1,104 @@
-import { createContext, useReducer } from "react";
+import { createContext, useEffect, useReducer } from "react";
+
 export const CartContext = createContext();
+
 const initialState = {
-    CartItems: [],
-}
+    CartItems: (() => {
+        const cart = localStorage.getItem("cart");
+        if (cart) {
+            try {
+                return JSON.parse(cart);
+            } catch (error) {
+                console.error("Error parsing cart from localStorage:", error);
+                return [];
+            }
+        }
+        return [];
+    })(),
+};
 
-export const cartReducer = (state, action) => {
-    console.log("cartReducer", action);
-
-
+const CartReducer = (state, action) => {
+    console.log(action);
     switch (action.type) {
+        case "ADD_TO_CART": {
+            const isExit = state.CartItems.find((item) => item._id === action.payload._id);
 
-        case "AddToCart": {
-            const isExiting = state.CartItems.find((item) => {
-                return item.id === action.payload.id;
-            })
+            if (isExit) {
+                const updatedCart = state.CartItems.map((item) =>
+                    item._id === action.payload._id
+                        ? { ...item, qty: item.qty + 1 }
+                        : item
+                );
 
-            if (isExiting) {
-                let updatedProduct = state.CartItems.map((item) => {
-                    if (item.id === action.payload.id) {
-                        return { ...item, qty: item.qty + 1 };
-                    }
-                    return item;
-                });
+                return { ...state, CartItems: updatedCart };
+            } else {
+                const newCartItem = { ...action.payload, qty: 1 };
+                const updateCartItems = [...state.CartItems, newCartItem];
 
+                alert(`${action.payload.name} Added to cart`);
 
                 return {
                     ...state,
-                    CartItems: updatedProduct,
-                }
-            } else {
-                const newCartItems = { ...action.payload, qty: 1 };
-                const newCartItemProducts = [...state.CartItems, newCartItems]
-                alert(newCartItems.name + "Is added to Cart")
-
-
-
-                return {
-                    ...state, CartItems: newCartItemProducts,
-                }
+                    CartItems: updateCartItems,
+                };
             }
         }
 
         case "Increment": {
-
-            const updatedProduct = state.CartItems.map((item) => {
-                if (item.id === action.payload.id) {
-                    return { ...item, qty: item.qty + 1 };
-                } else {
-                    return item;
-                }
-            });
+            const updatedCart = state.CartItems.map((item) =>
+                item._id === action.payload._id
+                    ? { ...item, qty: item.qty + 1 }
+                    : item
+            );
             return {
                 ...state,
-                CartItems: updatedProduct,
+                CartItems: updatedCart,
             };
-
-
         }
 
         case "Decrement": {
-            const updatedProduct = state.CartItems.map((item) => {
-                if (item.id === action.payload.id && item.qty > 0) {
-                    return { ...item, qty: item.qty - 1 };
-                } else {
-                    return item;
-                }
-            });
+            const updatedCart = state.CartItems.map((item) =>
+                item._id === action.payload._id && item.qty > 1
+                    ? { ...item, qty: item.qty - 1 }
+                    : item
+            );
             return {
                 ...state,
-                CartItems: updatedProduct,
+                CartItems: updatedCart,
             };
         }
 
         case "Delete": {
-            const filterProducts = state.CartItems.filter((item) => {
-                if (item.id !== action.payload.id) {
-                    return item;
-                }
-            });
+            const filteredItems = state.CartItems.filter((item) => item._id !== action.payload._id);
             return {
                 ...state,
-                CartItems: filterProducts,
+                CartItems: filteredItems,
             };
-
         }
 
-        case "EmptyCart": {
-            return { ...state, CartItems: [] }
+        case "ClearCart": {
+            return {
+                ...state,
+                CartItems: [],
+            };
         }
 
         default: {
             return state;
         }
-
-
     }
-
-
-
-}
+};
 
 export const CartProvider = ({ children }) => {
-    const [state, dispatch] = useReducer(cartReducer, initialState)
+    const [state, dispatch] = useReducer(CartReducer, initialState);
 
-    return <CartContext.Provider value={{ state, dispatch }}>
-        {children}
+    useEffect(() => {
+        localStorage.setItem("cart", JSON.stringify(state.CartItems));
+    }, [state.CartItems]);
 
-    </CartContext.Provider>
-}
+    return (
+        <CartContext.Provider value={{ state, dispatch }}>
+            {children}
+        </CartContext.Provider>
+    );
+};

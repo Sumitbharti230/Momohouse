@@ -58,7 +58,7 @@ console.log(state)
                 <button className="bg-blue-500 text-white w-52 h-10 rounded-sm shadow-xl  hover:bg-blue-600 font-bold">Buy Now</button>
                 <button
                 onClick={()=>{
-                  dispatch({type:"AddToCart",payload:singleProduct})
+                  dispatch({type:"ADD_TO_CART",payload:singleProduct})
                 }
 
 

@@ -9,6 +9,8 @@ import party from '../../assets/images/party.png'
 import chefCap from '../../assets/images/chefCap.png'
 import girl from '../../assets/images/girl.png'
 import Footer from "../Footer/Footer"
+import { FaMapMarkerAlt, FaPhone, FaClock } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaTiktok } from "react-icons/fa";
 
 import { CiCircleChevLeft, CiCircleChevRight } from "react-icons/ci";
 import { NavLink } from "react-router-dom";
@@ -16,6 +18,7 @@ import { useState, useEffect } from "react";
 
 
 function Home() {
+
 
 
   const [recipes, setRecipes] = useState([]);
@@ -102,9 +105,9 @@ function Home() {
         <div className="w-[30%]">
           <h1 className="text-2xl font-bold">Why Customers <span className="text-orange-500"> Love Us</span></h1> <br /><br />
           <p>Lorem ipsum dolor sit amet consectetur. Sed diam dolor vivamus nibh fermentum vulputate tortor. Egestas facilisi luctus turpis arcu dignissim. Amet neque enim etiam purus id. Tortor sit orci blandit cursus turpis.</p> <br />
-        
-        <NavLink to="/about">
-          <Button title="Explore Our Story" />
+
+          <NavLink to="/about">
+            <Button title="Explore Our Story" />
           </NavLink>
 
         </div>
@@ -279,21 +282,54 @@ function Home() {
 
         </div>
 
-        <div className=" border-2 p-3 flex gap-5 mt-10 shadow-xl rounded-xl h-[550px]">
-          <div className="bg-green-800 text-white rounded-xl">
-            <div>
-              <p>Our Address</p>
-              <p>New Baneshwor, Kathmandu, Bagmati, Nepal</p>
+        <div className=" flex h-[550px] p-5 gap-5" >
 
-            </div>
+          <div className=" bg-teal-800 text-white p-6 rounded-xl w-72 h-[560px] text-left max-w-md mx-auto space-y-6">
+            {/* Address Section */}
             <div>
-              <p>Our Contacts</p>
-              <div></div>
-              <p>Mobile</p>
+              <h3 className="flex items-center gap-2 text-lg font-semibold">
+                <FaMapMarkerAlt /> Our Address
+              </h3>
+              <p className="italic text-sm mt-4">New Baneshwor, Kathmandu, Bagmati,<br /> Nepal</p>
             </div>
 
+            {/* Contacts Section */}
+            <div>
+              <h3 className="flex items-center gap-2 text-lg font-semibold">
+                <FaPhone /> Our Contacts
+              </h3>
+              <div className="text-sm flex mt-4">
+                <p><strong>Mobile:</strong> <br /> 980 5689789 <br /> 9841 275897</p>
+                <p><strong className="ml-10"> Landline:</strong> <br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;01-4783972</p>
+              </div>
+            </div>
+
+            {/* Service Time Section */}
+            <div>
+              <h3 className="flex items-center gap-2 text-lg font-semibold">
+                <FaClock /> Our Service Time
+              </h3>
+              <div className="text-sm flex mt-4">
+                <p><strong>MON - FRI:</strong>  <br />10 am - 8 pm</p>
+                <p><strong className="ml-10">SAT - SUN:</strong><p className="ml-10"> Closed</p> </p>
+              </div>
+            </div>
+
+            {/* Social Networks */}
+            <div className="text-left ">
+              <p className="italic text-sm mt-16">Get in touch in social networks</p>
+              <div className="flex gap-4 mt-4 text-xl">
+                <FaFacebook className="cursor-pointer hover:text-gray-300" />
+                <FaInstagram className="cursor-pointer hover:text-gray-300" />
+                <FaTiktok className="cursor-pointer hover:text-gray-300" />
+              </div>
+            </div>
           </div>
-          <div>
+
+
+
+
+          <div className="">
             <form className="ml-5 mt-5 text-left">
               {/* First Name */}
               <div className="flex gap-10 ">
@@ -379,12 +415,14 @@ function Home() {
                   id="message"
                   name="message"
                   placeholder="Enter your message"
-                  className="w-full h-11 p-2 border rounded"
+                  className="w-full h-24 p-2 border rounded"
                   rows="4"
                   required
                 ></textarea>
               </div>
+              <div className="border-2 mt-5">
               <Button title="Send message" color="orange" />
+              </div>
             </form>
           </div>
 
@@ -393,11 +431,15 @@ function Home() {
       </div>
 
 
-      <div className="mt-10">
-      <hr />
 
-    <Footer/>
-    </div>
+
+
+
+      <div className="mt-10">
+        <hr />
+
+        <Footer />
+      </div>
 
 
     </>

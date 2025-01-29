@@ -88,7 +88,7 @@ const CartPage = () => {
 
           <button
             onClick={() => {
-              dispatch({ type: "EmptyCart" })
+              dispatch({ type: "ClearCart" })
             }}
             className="bg-red-600 text-white rounded p-2 w-52 mt-4 " > Clear Cart ({totalItems}) </button>
         </div>

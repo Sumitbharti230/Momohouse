@@ -8,7 +8,7 @@ function Profile() {
 
     return (
 
-        <div>
+        <div className="">
         {isAuthenticated ? (
           <div>
             <h2>Welcome, {user.name}</h2>

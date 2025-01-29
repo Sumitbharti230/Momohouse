@@ -3,6 +3,8 @@ import { NavLink } from "react-router-dom";
 import cheffinger from '../../assets/images/cheffinger.png'
 import qr from '../../assets/images/qr.png'
 import blue from '../../assets/images/Ablue.png'
+import masala from '../../assets/images/Amasala.png'
+import { FaRegCheckCircle, FaRegCircle } from "react-icons/fa";
 
 const Allergy = () => {
   return (
@@ -21,100 +23,239 @@ const Allergy = () => {
           </div>
         </div>
       </div>
-      <div >
-        <div className='flex flex-col justify-center items-center mt-20'>
-          <h1 className='text-3xl text-black font-bold'>---------------<span className='text-orange-600'>Ingridient's</span> Used ---------------</h1>
 
 
-          <div>
+      <section className=" w-full allergyDIV allergyList py-10">
+        <h3 className="text-center text-3xl font-[900]">
+          <span className="text-[#FB5D03]">Ingredients</span> Used
+        </h3>
+        <div className="bg-white w-[42%] my-6 border-2 border-[#388482] rounded-md shadow-md p-6 mx-auto">
+          <h4 className="text-lg font-semibold mb-5">For The Dough</h4>
 
-              <div className='border-2 border-blue-600  font-semibold flex rounded-xl w-[744px] h-[344px] pl-10 mt-20 '>
-                <ul className=' list-disc space-y-9 p-5'>
-                  <h1 className='text-black  font-medium text-2xl mb-4'>For The Dough</h1>
-                  <li>120 grams refined flour</li>
-                  <li>1/2 tsp baking powder</li>
-                  <li>1/2 tsp salt water (for kneading)</li>
-                </ul>
+          <ul className="list-none">
+            <li className="flex items-center gap-2">
+              <FaRegCircle className="text-red-500" /> 120 gms refined flour.
+            </li>
 
-              </div>
+            <li className="flex items-center gap-2 my-3">
+              <FaRegCircle className="text-red-500" /> 1/4 tsp baking powder.
+            </li>
 
-          </div>
+            <li className="flex items-center gap-2">
+              <FaRegCircle className="text-red-500" /> 1/2 tsp salt water.
+            </li>
+          </ul>
+        </div>
 
 
 
-          <div className='border-2 border-blue-600 font-semibold flex rounded-xl w-[744px] h-[482px] pl-10 mt-4'>
-            <ul className=' list-disc space-y-6 p-5'>
-              <h1 className='text-black  font-medium text-2xl mb-4'>For The Chicking Filling :</h1>
-              <li>1 cup chicken minced</li>
-              <li>1/2 cup onions, finely chopped</li>
-              <li>1/4 tsp black peeper powder</li>
-              <li>1 tsp oil</li>
-              <li>1/2 tsp garlic paste</li>
-              <li>1/2 tsp soya sauce</li>
-              <li>Salt</li>
-              <li>1/4 tsp vinegar</li>
-            </ul>
-          </div>
-          <div className='border-2 border-blue-600 font-semibold flex rounded-xl w-[744px] h-[634px] pl-10 mt-4'>
-            <ul className=' list-disc space-y-9 p-5'>
-              <h1 className='text-black  font-medium text-2xl mb-4'>For The Vegeterian Filling :</h1>
-              <li>1 cup cabbage and carrots, grated</li>
-              <li>2 tbsp onions, finely chopped</li>
-              <li>1/2 tsp garlic, finely chopped</li>
-              <li>1 tsp oil</li>
-              <li>1/4 tsp vinegar</li>
-              <li>1/2 tsp soya sauce</li>
-              <li>to taste salt</li>
-              <li>to taste peeper</li>
-              <li>1 tbsp cornflour</li>
-            </ul>
-          </div>
-          <div className='border-2 font-semibold border-blue-600 flex rounded-xl w-[744px] h-[582px] pl-10 mt-4'>
-            <ul className=' list-disc space-y-10 p-5'>
-              <h1 className='text-black  font-medium text-2xl mb-4'>For The Chilli Sauce :</h1>
-              <li>25 gram garlic, pleeled</li>
-              <li>6 gms whole red chillies</li>
-              <li>3 tbsp vinegar</li>
-              <li>1 tbsp oil</li>
-              <li>to taste salt</li>
-              <li>to taste chilly</li>
-              <li>to taste sugar</li>
-            </ul>
+        {/* first div */}
+        <div className="bg-white w-[42%] my-6 border-2 border-[#388482] rounded-md shadow-md p-6 mx-auto">
+          {/* <div className=" top-[80px] border-2">
+        <img src={masala} alt="" className="w-[1000px]" />
+        </div> */}
+
+          <h4 className="text-lg font-semibold mb-5">
+            For The Chicken Fillings
+          </h4>
+
+
+
+
+          <ul className="list-none flex flex-col gap-3">
+            <li className="flex items-center gap-2">
+              <FaRegCircle className="text-red-500" /> 1 cup chicken minced.
+            </li>
+
+            <li className="flex items-center gap-2 ">
+              <FaRegCircle className="text-red-500" /> 1/2 cup onions, finely
+              chopped.
+            </li>
+
+            <li className="flex items-center gap-2">
+              <FaRegCircle className="text-red-500" /> 1/4 tsp black pepper
+              powder.
+            </li>
+
+            <li className="flex items-center gap-2">
+              <FaRegCircle className="text-red-500" /> 1 tbsp oil.
+            </li>
+
+            <li className="flex items-center gap-2">
+              <FaRegCircle className="text-red-500" /> 1/2 tsp garlic paste.
+            </li>
+
+            <li className="flex items-center gap-2">
+              <FaRegCircle className="text-red-500" /> 1/2 tsp soya sauce.
+            </li>
+
+            <li className="flex items-center gap-2">
+              <FaRegCircle className="text-red-500" /> salt.
+            </li>
+
+            <li className="flex items-center gap-2">
+              <FaRegCircle className="text-red-500" /> 1/4 tsp vinegar.
+            </li>
+          </ul>
+        </div>
+        {/* second div */}
+
+        <div className="bg-white w-[42%] my-6 border-2 border-[#388482] rounded-md shadow-md p-6 mx-auto">
+          <h4 className="text-lg font-semibold mb-5">
+            For The Vegetarian Fillings
+          </h4>
+
+          <ul className="list-none flex flex-col gap-3">
+            <li className="flex items-center gap-2">
+              <FaRegCircle className="text-red-500" /> 1 cup cabbage and carots,
+              grated.
+            </li>
+
+            <li className="flex items-center gap-2 ">
+              <FaRegCircle className="text-red-500" /> 2 tbsp onions, finely
+              chopped.
+            </li>
+
+            <li className="flex items-center gap-2">
+              <FaRegCircle className="text-red-500" /> 1 tbsp ginger, finely
+              chopped.
+            </li>
+
+            <li className="flex items-center gap-2">
+              <FaRegCircle className="text-red-500" /> 1 tsp oil.
+            </li>
+
+            <li className="flex items-center gap-2">
+              <FaRegCircle className="text-red-500" /> 1/4 tsp vinegar.
+            </li>
+
+            <li className="flex items-center gap-2">
+              <FaRegCircle className="text-red-500" /> 1/2 tsp soya sauce.
+            </li>
+
+            <li className="flex items-center gap-2">
+              <FaRegCircle className="text-red-500" /> salt.
+            </li>
+
+            <li className="flex items-center gap-2">
+              <FaRegCircle className="text-red-500" /> 1/4 tsp vinegar.
+            </li>
+          </ul>
+        </div>
+        {/* third div */}
+
+        <div className="bg-white w-[42%] my-6 border-2 border-[#388482] rounded-md shadow-md p-6 mx-auto">
+          <h4 className="text-lg font-semibold mb-5">For Chilli Sauce</h4>
+
+          <ul className="list-none flex flex-col gap-3">
+            <li className="flex items-center gap-2">
+              <FaRegCircle className="text-red-500" /> 25 gram garlic peeled.
+            </li>
+
+            <li className="flex items-center gap-2 ">
+              <FaRegCircle className="text-red-500" /> 6 gms whole chillies.
+            </li>
+
+            <li className="flex items-center gap-2">
+              <FaRegCircle className="text-red-500" /> 3 tbsp vinegar.
+            </li>
+
+            <li className="flex items-center gap-2">
+              <FaRegCircle className="text-red-500" /> 1 tbsp oil.
+            </li>
+
+            <li className="flex items-center gap-2">
+              <FaRegCircle className="text-red-500" /> salt.
+            </li>
+
+            <li className="flex items-center gap-2">
+              <FaRegCircle className="text-red-500" /> sugar.
+            </li>
+          </ul>
+        </div>
+        {/* forth div */}
+      </section>
+
+
+      <section className=" p-16 " >
+        <div className="w-full text-center mb-6">
+          <h3 className="text-center text-3xl font-[900]">
+            <span className="text-[#FB5D03]">Allergy</span> Advice
+          </h3>
+        </div>
+
+        <div>
+          <p className="text-[#4d4d4d]">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Voluptatibus provident adipisci sapiente veniam eius blanditiis,
+            consectetur quas quasi magnam corrupti. Nam eligendi corporis
+            repudiandae veritatis laudantium voluptates ratione, modi excepturi
+            pariatur odit ipsum incidunt nihil iure omnis quibusdam distinctio!
+            Exercitationem.
+          </p>
+          <br />
+
+          <p className="text-[#4d4d4d]">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
+            quibusdam dolorum natus earum repellendus praesentium magnam ex
+            aspernatur aliquam necessitatibus. Repellendus non vel at beatae
+            molestias mollitia reiciendis praesentium voluptates.
+          </p>
+          <br />
+
+          <p className="text-[#4d4d4d]">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi
+            natus enim sint atque, ex tempora praesentium eligendi ducimus
+            provident hic possimus odit ipsa. Non, pariatur maxime.
+            Necessitatibus soluta vero architecto, sapiente autem nisi
+            recusandae eaque odio, porro veritatis perspiciatis, asperiores ut
+            reiciendis excepturi. Vero labore doloribus quisquam commodi
+            eligendi in eaque fuga numquam aperiam temporibus. Id nesciunt ullam
+            commodi in.
+          </p>
+          <br />
+
+          <p className="text-[#4d4d4d]">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi
+            natus enim sint atque, ex tempora praesentium eligendi ducimus
+            provident hic possimus odit ipsa. Non, pariatur maxime.
+            Necessitatibus soluta vero architecto, sapiente autem nisi
+            recusandae eaque odio, porro veritatis perspiciatis, asperiores ut
+            reiciendis excepturi. Vero labore doloribus quisquam commodi
+            eligendi in eaque fuga numquam aperiam temporibus. Id nesciunt ullam
+            commodi in. Lorem ipsum, dolor sit amet consectetur adipisicing
+            elit. Aperiam suscipit ab, laboriosam error reprehenderit ducimus
+            tenetur fuga iure ad cupiditate voluptatibus enim deleniti, a
+            aliquam, ratione nesciunt odit fugiat in. Lorem, ipsum dolor sit
+            amet consectetur adipisicing elit. Quasi natus enim sint atque, ex
+            tempora praesentium eligendi ducimus provident hic possimus odit
+            ipsa. Non, pariatur maxime. Necessitatibus soluta vero architecto,
+            sapiente autem nisi recusandae eaque odio, porro veritatis
+            perspiciatis, asperiores ut reiciendis excepturi. Vero labore
+            doloribus quisquam commodi eligendi in eaque fuga numquam aperiam
+            temporibus. Id nesciunt ullam commodi in. Lorem ipsum, dolor sit
+            amet consectetur adipisicing elit. Aperiam suscipit ab, laboriosam
+            error reprehenderit ducimus tenetur fuga iure ad cupiditate
+            voluptatibus enim deleniti, a aliquam, ratione nesciunt odit fugiat
+            in.
+          </p>
+        </div>
+        {/* first div */}
+
+        <div className="  bg-slate-50 mt-10 p-6 rounded-md flex flex-col gap-2 items-center shadow-xl">
+          <h4 className="text-2xl text-[#229493] font-bold">
+            Scan the QR Code
+          </h4>
+          <p>You can also check the allergy advices using your phone as well</p>
+          <div className="bg-white p-2 rounded-md shadow-md mt-9">
+            <img src={qr} alt="allergy qr" className="md:w-56 w-44" />
           </div>
         </div>
-      </div>
-      <div className='flex ml-20 mt-20 items-center justify-center'>
-        <div  >
-          <h1 className='mb-10 items-center justify-center flex text-2xl font-bold '> ---------------<span className='text-orange-600'>Allergy  &nbsp;</span>
-            Advice---------------</h1>
-          <p className='ml-10 items-center text-1xl text-black'>Lorem ipsum dolor sit amet consectetur. Feugiat lectus sit est blandit in gravida. Nisl facilisis luctus sit porttitor placerat purus tincidunt. Cursus<br /> nascetur a mauris odio quis sociis pretium nisl. In viverra diam dis montes orci congue vulputate magna ullamcorper. Semper tellus ipsum felis <br />maecenas ultrices turpis amet euismod malesuada. Amet sed neque vitae malesuada quis sed urna.<br /><br />
+      </section>
 
-            Feugiat orci feugiat cursus risus tincidunt. Aliquet nam iaculis bibendum tortor varius sit. Volutpat nunc nisl quisque elit. Ac est ultricies risus et sed. <br />Donec auctor tristique quam morbi pellentesque et. Scelerisque dui id arcu laoreet iaculis nunc et nulla sed. Aliquet nullam vulputate quis ut mi <br />placerat auctor. Ipsum massa suspendisse netus mollis interdum.<br /><br />
-
-            Augue leo eget ut vitae maecenas ac. Metus massa nunc tristique donec dignissim aenean congue justo et. Parturient elit adipiscing non vitae mattis. <br />Congue senectus urna cursus nisi nisl nisl tincidunt rhoncus. Congue sit etiam vestibulum elit aenean leo enim volutpat. Aliquet vitae condimentum <br />bibendum ullamcorper vel cursus libero netus bibendum. Lorem id ut proin tincidunt. Nibh nunc amet odio est et. Sem dui nunc morbi leo quisque<br /> viverra ultrices. Mattis at tempus ultricies ut feugiat nunc dignissim. Urna turpis purus turpis elit risus.<br /><br />
-
-            Sed elit ornare senectus dignissim diam dolor sed dictum. Faucibus mauris senectus odio blandit diam nunc. Urna volutpat ut potenti ut mus orci<br /> neque sem. Mattis amet at amet faucibus nisl morbi aenean ac. Justo turpis bibendum donec lacinia. Enim integer ornare nibh urna enim tortor arcu<br /> sit lacinia. Dapibus praesent vitae dolor cursus fringilla hac facilisis pellentesque. Elementum lacus varius et neque amet aliquam donec sed. Ultrices<br /> euismod commodo id vehicula commodo. Amet lorem eros nulla mauris. Sit arcu enim sit nunc mi sed aenean. Ornare enim vitae volutpat est dui<br /> tortor. Viverra habitant et consequat vitae elit aliquet iaculis in tristique.<br /><br />
-
-            Quam ipsum viverra ac laoreet platea in praesent. Mattis molestie arcu nulla convallis interdum proin dui ut porta. Amet potenti praesent pulvinar<br /> scelerisque vitae habitant eget. Senectus hac id aliquam ipsum urna. Est ut amet nec sollicitudin nunc viverra nec ipsum suspendisse. Etiam risus<br /> ultricies dictum nisl. Bibendum ultrices elementum feugiat erat suspendisse mi fermentum magna suspendisse. Nisi mattis consequat nec donec eu<br /> amet nulla a. At blandit vulputate morbi tortor amet. Hac nec gravida tempor ac. Senectus nunc libero scelerisque quisque. Risus condimentum<br /> mattis massa integer.</p>
-        </div>
-      </div>
-      <div className=' flex ml-34 mt-20 items-center justify-center'>
-        <div className=" ">
-          <h1 className='mb-4 ml-38 items-center justify-center flex  text-2xl font-bold  text-green-700'>Scan the QR to pay</h1>
-          <p className='text-gray-500 mb-6'>You can also check the  allergy advice  using your phone as well</p>
-          <img src={qr} className='ml-36 w-28' />
-        </div>
-      </div>
-
-
-
-
-      <div className="mt-10">
-        <hr />
-
-        <Footer />
-      </div>
-
+<div className="mt-">
+<Footer/>
+</div>
     </div>
 
 
