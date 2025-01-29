@@ -1,18 +1,12 @@
 import { GoArrowRight } from "react-icons/go";
 
-function Button({ title, color }) {
+function Button({ title }) {
     return (
         <div>
             <button
 
-                style={{
-
-                    backgroundColor: { color }
-
-                }}
-
-
-                className="bg-green-900 hover:bg-green-800 p-4
+               
+                className=" bg-teal-800 hover:bg-green-800 p-4
              flex items-center gap-x-2 text-white rounded-full">
                 {title}
                 <GoArrowRight size={20} />

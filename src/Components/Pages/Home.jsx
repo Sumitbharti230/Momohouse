@@ -420,9 +420,11 @@ function Home() {
                   required
                 ></textarea>
               </div>
-              <div className="border-2 mt-5">
-              <Button title="Send message" color="orange" />
-              </div>
+
+
+              <button className="bg-orange-500 mt-5 hover:bg-green-800 p-4
+             flex items-center gap-x-2   text-white rounded-full"> Send Message</button>
+
             </form>
           </div>
 
