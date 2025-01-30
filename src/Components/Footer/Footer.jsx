@@ -102,7 +102,7 @@ function Footer() {
 
 
                 <div className="flex items-center text-center justify-center mt-16 ">
-                    <p>Everest Momo Pvt Ltd. All Rights Reserved.</p>
+                    <p>Copyright ©️2025 Everest Momo Pvt Ltd. All Rights Reserved.</p>
                 </div>
 
             </div>
