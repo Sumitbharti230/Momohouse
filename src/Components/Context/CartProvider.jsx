@@ -27,11 +27,11 @@ const CartReducer = (state, action) => {
     console.log(action);
     switch (action.type) {
         case "ADD_TO_CART": {
-            const isExit = state.CartItems.find((item) => item._id === action.payload._id);
+            const isExit = state.CartItems.find((item) => item.id === action.payload.id);
 
             if (isExit) {
                 const updatedCart = state.CartItems.map((item) =>
-                    item._id === action.payload._id
+                    item.id === action.payload.id
                         ? { ...item, qty: item.qty + 1 }
                         : item
                 );
@@ -52,7 +52,7 @@ const CartReducer = (state, action) => {
 
         case "Increment": {
             const updatedCart = state.CartItems.map((item) =>
-                item._id === action.payload._id
+                item.id === action.payload.id
                     ? { ...item, qty: item.qty + 1 }
                     : item
             );
@@ -64,7 +64,7 @@ const CartReducer = (state, action) => {
 
         case "Decrement": {
             const updatedCart = state.CartItems.map((item) =>
-                item._id === action.payload._id && item.qty > 1
+                item._id === action.payload.id && item.qty > 1
                     ? { ...item, qty: item.qty - 1 }
                     : item
             );
@@ -75,7 +75,7 @@ const CartReducer = (state, action) => {
         }
 
         case "Delete": {
-            const filteredItems = state.CartItems.filter((item) => item._id !== action.payload._id);
+            const filteredItems = state.CartItems.filter((item) => item.id !== action.payload.id);
             return {
                 ...state,
                 CartItems: filteredItems,
