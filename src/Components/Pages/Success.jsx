@@ -22,6 +22,8 @@ function Success() {
 
         <h1>Payment Successful</h1>
         <p>Thank You</p>
+        <button className=' bg-red-600 hover:bg-green-800 p-4
+             flex items-center gap-x-2 text-white rounded-full'>Back to menu</button>
       </div>
     </div>
   )
