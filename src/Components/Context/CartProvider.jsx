@@ -64,7 +64,7 @@ const CartReducer = (state, action) => {
 
         case "Decrement": {
             const updatedCart = state.CartItems.map((item) =>
-                item._id === action.payload.id && item.qty > 1
+                item.id === action.payload.id && item.qty > 1
                     ? { ...item, qty: item.qty - 1 }
                     : item
             );
