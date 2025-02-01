@@ -43,9 +43,9 @@ console.log(transaction_uuid)
         />
         <p className="text-2xl font-bold"><span className="text-orange-600">Cofirm</span> to Pay</p>
         <p className="font-semibold">Total_amount is</p>
-        Rs:
+      <p className="font-bold">  Rs: <span className="text-red-600 ">{total_amount} </span></p>
         <input
-          type="text"
+          type="hidden"
           id="total_amount"
           name="total_amount"
           value= {total_amount}
