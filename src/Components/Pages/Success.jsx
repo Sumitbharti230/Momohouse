@@ -23,10 +23,10 @@ function Success() {
 
         <h1>Payment Successful</h1>
         <p>Thank You</p>
-        <NavLink to="/menu">
+        {/* <NavLink to="/menu">
         <button className=' bg-red-600 hover:bg-green-800 p-2
              flex items-center gap-x-2 text-white rounded-full justify-center mr-5'>Back to menu</button>
-             </NavLink>
+             </NavLink> */}
       </div>
     </div>
   )
