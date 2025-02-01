@@ -18,7 +18,7 @@ function Success() {
   return (
     <div className=' flex justify-center items-center it p-4 h-[100%]'>
 
-      <div className=' text-center font-semibold shadow-xl'>
+      <div className=' text-center items-center font-semibold shadow-xl'>
         <img src="https://png.pngtree.com/png-vector/20190228/ourmid/pngtree-check-mark-icon-design-template-vector-isolated-png-image_711429.jpg" alt="success_image" className='w-52' />
 
         <h1>Payment Successful</h1>
