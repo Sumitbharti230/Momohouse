@@ -25,7 +25,7 @@ function Success() {
         <p>Thank You</p>
         <NavLink to="/menu">
         <button className=' bg-red-600 hover:bg-green-800 p-2
-             flex items-center gap-x-2 text-white rounded-full justify-center mr-[50%]'>Back to menu</button>
+             flex items-center gap-x-2 text-white rounded-full justify-center mr-5'>Back to menu</button>
              </NavLink>
       </div>
     </div>
