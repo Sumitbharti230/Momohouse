@@ -4,9 +4,9 @@ import chefimg from '../../assets/images/chefimg.png'
 import circle from '../../assets/images/circle.png'
 import momo from '../../assets/images/momo.png'
 import man from '../../assets/images/man.png'
-import like from '../../assets/images/like.png'
-import party from '../../assets/images/party.png'
-import chefCap from '../../assets/images/chefCap.png'
+import like from '../../assets/images/hlike.png'
+import celebrate from '../../assets/images/hcelebrate.png'
+import chefCap from '../../assets/images/hchefcap.png'
 import girl from '../../assets/images/girl.png'
 import Footer from "../Footer/Footer"
 import { FaMapMarkerAlt, FaPhone, FaClock } from "react-icons/fa";
@@ -229,11 +229,27 @@ function Home() {
 
 
         {/* this is after the video */}
-        <div className=" flex justify-center items-center gap-40 mt-10">
-          <img src={like} alt="qualityFood" className=" w-48" />
-          <img src={party} alt="party_img" className="w-48" />
-          <img src={chefCap} alt="chefCap_img" className="w-48" />
+        <div className=" flex justify-center items-center gap-24 mt-14 ">
+          <div className="flex flex-col items-center p-5">
+          <img src={like} alt="qualityFood" className=" w-28" />
+          <h1 className="font-bold text-2xl mt-3">Quality Food</h1>
+          <p className="mt-4 text-slate-800">Only the best food with top quality <br /> products and ingredients</p>
+          </div>
 
+          <div className="flex flex-col items-center p-5">
+          <img src={celebrate} alt="party_img" className="w-28" />
+          <h1 className="font-bold text-2xl mt-3">Private Party</h1>
+          <p className="mt-4 text-slate-800">Get the best food for all your private <br /> parties and gatherings</p>
+          </div>
+
+
+          <div className=" flex flex-col items-center p-5">
+          <img src={chefCap} alt="chefCap_img" className="w-28" />
+          <h1 className="font-bold text-2xl mt-3">Categring</h1>
+          <p className="mt-4 text-slate-800">Get the best food for any occasions <br /> and gatherings</p>
+
+
+          </div>
 
         </div>
 
